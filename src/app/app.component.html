@@ -472,6 +472,18 @@
 
 </div>
 
+<h1>Product List</h1>
+<div *ngFor="let product of products$ | async">
+  <div>
+    <p>ID: {{ product.id }}</p>
+    <p>Title: {{ product.attributes.Title }}</p>
+    <p>Created At: {{ product.attributes.createdAt | date:'medium' }}</p>
+    <p>Updated At: {{ product.attributes.updatedAt | date:'medium' }}</p>
+    <p>Published At: {{ product.attributes.publishedAt | date:'medium' }}</p>
+  </div>
+  <hr />
+</div>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
