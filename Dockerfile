@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular app
-RUN npm run build
+RUN ng build
 
 # Use a smaller, production-ready image
 FROM nginx:alpine
